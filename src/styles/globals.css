@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.bodystyle{
+  @apply min-h-full min-w-full bg-purple-500
+}
