@@ -1,6 +1,6 @@
 import { Dispatch, FC, SetStateAction, useState} from "react";
 import { trpc } from "../../utils/trpc";
-import { Note } from "@prisma/client";
+import type { Note } from "@prisma/client";
 
 interface ItemModalProps {
   setModalOpen:Dispatch<SetStateAction<boolean>>
@@ -24,7 +24,7 @@ const NotesModal: FC<ItemModalProps> = ({setModalOpen,  setItems}) =>{
     [e.currentTarget.name]: e.currentTarget.value,
   })
 
-    // @ts-ignore
+    //@ts-ignore
     function handleSubmit(e) {
       e.preventDefault();
       mutate({title: fields.title, body:fields.body})

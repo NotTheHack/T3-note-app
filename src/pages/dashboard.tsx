@@ -26,7 +26,7 @@ export default function Component(){
 
   if (!session) {
     return(
-      useEffect(() => {router.push("/")})
+      () => {router.push("/")}
     )
   }
 
@@ -72,7 +72,7 @@ export default function Component(){
     return(
       <tbody>
       {items.map((items) =>(
-        <tr className='border'>
+        <tr key={null} className='border'>
         <td key={items.title} className="text-center border "><span>{items.title?.substring(0,50)}</span></td>
         <td key={items.body} className="text-center border"><span>{items.body?.substring(0,50)}</span></td>
         <td key={items.createdAt.toString()} className="text-center border"><span>{items.createdAt.toDateString()}</span></td>

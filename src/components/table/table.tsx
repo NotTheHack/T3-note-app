@@ -17,7 +17,7 @@ export default function TableRow(){
   return(
     <tbody>
     {items.map((items) =>(
-      <tr className=' relative'>
+      <tr key={null} className=' relative'>
       <td key={items.title} className="text-center"><span>{items.title}</span></td>
       <td key={items.body} className="text-center"><span>{items.body}</span></td>
       <td key={items.id} className="text-center"><span>{items.createdAt.toDateString()}</span></td>
